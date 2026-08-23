@@ -1,4 +1,4 @@
-import 'package:e_commerce/core/routes.dart';
+import 'package:e_commerce/core/routes/app_routes.dart';
 import 'package:e_commerce/core/widgets/custombutton.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +9,7 @@ class OnboardingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.white,
         body: Padding(
           padding: const EdgeInsets.only(top: 47),
           child: Column(
