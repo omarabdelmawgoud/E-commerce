@@ -23,7 +23,6 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       debugShowCheckedModeBanner: false,
       title: 'Ecoo',
-      home: const OnboardingScreen(),
     );
   }
 }
