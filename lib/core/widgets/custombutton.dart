@@ -18,7 +18,7 @@ class Custombutton extends StatelessWidget {
       onTap: ontap,
       child: Container(
         height: 54,
-        width: 341,
+        width: double.infinity,
         decoration: BoxDecoration(
           color: backgroundColor,
           border: borderColor == null ? null : Border.all(color: borderColor!),
@@ -28,7 +28,8 @@ class Custombutton extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             leadingWidget ?? (leading != null ? Icon(leading, color: foregroundColor) : const SizedBox.shrink()),
-            Text(" $text", style: TextStyle(fontSize: 16, color: foregroundColor, fontWeight: FontWeight.w400)),
+            if (leadingWidget != null || leading != null) const SizedBox(width: 10),
+            Text(text, style: TextStyle(fontSize: 16, color: foregroundColor, fontWeight: FontWeight.w400)),
             const SizedBox(width: 8),
             if (trailing != null) Icon(trailing, color: foregroundColor, size: 24),
           ],

@@ -1,7 +1,6 @@
 import 'package:e_commerce/core/widgets/custom_textfield.dart';
 import 'package:e_commerce/core/widgets/custombutton.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
@@ -24,14 +23,13 @@ class SignupScreen extends StatelessWidget {
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
               ),
               SizedBox(height: 24,),
-              SizedBox(height: 4,),
               CustomTextfield(fieldName: "Full Name",hintText: "Enter your full name",obsecure: false),
               SizedBox(height: 16,),
               CustomTextfield(fieldName: "Email", hintText: "Enter your email address",obsecure: false),
               SizedBox(height: 16,),
               CustomTextfield(fieldName: "Password", hintText: "Enter your password",obsecure: true,),
               SizedBox(height: 12,),
-              Text("By signing up you agree to our Terms, Privacy Policy, and Cookie Use"),
+              Text("By signing up you agree to our Terms, Privacy Policy, and Cookie Use",style: TextStyle(color: Color(0xff1A1A1A)),),
               SizedBox(height: 24,),
               Center(child: Custombutton(backgroundColor: Colors.black, text: "Create an account", ontap:() => Null)),
               SizedBox(height: 24,),
@@ -45,11 +43,15 @@ class SignupScreen extends StatelessWidget {
               ],),
               SizedBox(height: 24,),
               Custombutton(
-                
                 backgroundColor: Colors.white,
                 foregroundColor: Colors.black,
-                borderColor: Color(0xffD9D9D9),
-                leadingWidget: FaIcon(FontAwesomeIcons.google),
+                borderColor: const Color(0xffD9D9D9),
+                leadingWidget: Image.asset(
+                  'assets/images/logos_google-icon.png',
+                  width: 20,
+                  height: 20,
+                  fit: BoxFit.contain,
+                ),
                 text: "Sign up with Google",
                 ontap: () => Null,
               ),
@@ -60,7 +62,10 @@ class SignupScreen extends StatelessWidget {
                 text: "Sign up with Facebook",
                 ontap: () => Null,
               ),
-
+              Spacer(),
+              Center(child: Text("Already have an account? Log In")),
+              SizedBox(height: 10,),
+          
             ],
           ),
         ),
