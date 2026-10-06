@@ -36,10 +36,11 @@ class _CustomTextfieldState extends State<CustomTextfield> {
         Form(
           child: SizedBox(
             height: 52,
+            width: double.infinity,
             child: TextFormField(
               obscureText:widget.obsecure ,
               decoration: InputDecoration(
-                contentPadding: EdgeInsets.symmetric(horizontal: 16),
+                contentPadding: EdgeInsets.symmetric(horizontal: 20,vertical: 14),
                 hintText: widget.hintText,
                 hintStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
             

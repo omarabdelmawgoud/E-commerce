@@ -15,11 +15,11 @@ class SignupScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                'Create Account',
+                'Create an account',
                 style: TextStyle(fontSize: 32, fontWeight: FontWeight.w600),
               ),
               const Text(
-                "lets create tour account",
+                "Let's create your account.",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
               ),
               SizedBox(height: 24,),
